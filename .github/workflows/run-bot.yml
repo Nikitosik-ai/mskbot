@@ -35,6 +35,8 @@ jobs:
           
       - name: Сделать движок исполняемым
         run: chmod +x ./engines/stockfish.exe
+
+      - name: Сделать вариант движок исполняемым 
         run: chmod +x ./engines/fairy-stockfish.exe
 
       - name: Запустить бота
