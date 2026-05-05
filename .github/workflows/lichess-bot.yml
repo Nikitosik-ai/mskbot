@@ -32,22 +32,10 @@ jobs:
         pip install -r requirements.txt
         pip install tenacity  # Adding missing dependency
         
-    - name: Download latest Stockfish dev
-      run: |
-        mkdir -p engines
-        sudo apt-get update && sudo apt-get install -y unzip
-        curl -L -o stockfish.zip http://abrok.eu/stockfish/latest/linux/stockfish_x64_modern.zip
-        unzip -o stockfish.zip -d engines/
-        mv engines/stockfish_* engines/sf
-        chmod +x engines/sf
-        
     - name: Setup engines permissions
       run: |
-        if [ -f "engines/fairy-stockfish" ]; then
-          chmod +x engines/fsf
-        fi
-        if [ -f "engines/ShashChess39" ]; then
-          chmod +x engines/ShashChess39
+        if [ -f "engines/fairy-stockfish_x86-64-bmi2.exe" ]; then
+          chmod +x engines/fairy-stockfish_x86-64-bmi2.exe
         fi
 
     - name: Setup token
