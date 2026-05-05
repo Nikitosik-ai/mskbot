@@ -29,6 +29,10 @@ jobs:
         run: |
           pip install -r requirements.txt
 
+      - name: Установить tenacity
+        run: |
+          pip install tenacity
+
       - name: Подставить токен
         run: |
           sed -i "s/^token:.*/token: \"${TOKEN}\"/" config.yml
