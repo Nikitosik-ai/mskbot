@@ -37,9 +37,6 @@ jobs:
         if [ -f "engines/fairy-stockfish" ]; then
           chmod +x engines/fsf
         fi
-        if [ -f "engines/Stockfish" ]; then
-          chmod +x engines/Stockfish
-        fi
 
     - name: Setup token
       run: |
